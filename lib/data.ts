@@ -1,0 +1,53 @@
+import { MonitorPlay, BookOpen, FileCheck, GraduationCap } from "lucide-react";
+import { MenuCardProps } from "@/components/landing-page/menu-card";
+
+export const MENU_ITEMS: MenuCardProps[] = [
+  {
+    href: "#",
+    icon: MonitorPlay,
+    title: "Info Kelas Online",
+    subtitle: "Belajar bahasa Inggris dari mana saja",
+    iconColorClass: "text-blue-400",
+    iconBgClass: "bg-blue-500/10",
+    hoverIconBgClass: "group-hover:bg-blue-500/20",
+    hoverTextClass: "group-hover:text-blue-200",
+    hoverIconTextClass: "group-hover:text-blue-400",
+    hoverBorderClass: "hover:border-blue-500/40",
+  },
+  {
+    href: "#",
+    icon: BookOpen,
+    title: "Info Kelas TOEFL Online",
+    subtitle: "Persiapan intensif skor maksimal",
+    iconColorClass: "text-blue-400",
+    iconBgClass: "bg-blue-500/10",
+    hoverIconBgClass: "group-hover:bg-blue-500/20",
+    hoverTextClass: "group-hover:text-blue-200",
+    hoverIconTextClass: "group-hover:text-blue-400",
+    hoverBorderClass: "hover:border-blue-500/40",
+  },
+  {
+    href: "/test-toefl-online",
+    icon: FileCheck,
+    title: "Info Test TOEFL Online",
+    subtitle: "Sertifikasi resmi dan terpercaya",
+    iconColorClass: "text-blue-400",
+    iconBgClass: "bg-blue-500/10",
+    hoverIconBgClass: "group-hover:bg-blue-500/20",
+    hoverTextClass: "group-hover:text-blue-200",
+    hoverIconTextClass: "group-hover:text-blue-400",
+    hoverBorderClass: "hover:border-blue-500/40",
+  },
+  {
+    href: "#",
+    icon: GraduationCap,
+    title: "Info Beasiswa 50%",
+    subtitle: "Program subsidi Kampung Inggris",
+    iconColorClass: "text-blue-400",
+    iconBgClass: "bg-blue-500/10",
+    hoverIconBgClass: "group-hover:bg-blue-500/20",
+    hoverTextClass: "group-hover:text-blue-200",
+    hoverIconTextClass: "group-hover:text-blue-400",
+    hoverBorderClass: "hover:border-blue-500/40",
+  },
+];

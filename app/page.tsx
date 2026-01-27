@@ -7,7 +7,7 @@ import { MENU_ITEMS } from "@/lib/data";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#02040a] text-slate-300 p-6 sm:p-12 relative overflow-hidden selection:bg-blue-500/30 selection:text-blue-200 font-sans">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#02040a] text-slate-300 p-6 pt-12 sm:p-12 relative overflow-hidden selection:bg-blue-500/30 selection:text-blue-200 font-sans">
       {/* Background Ambient Effects */}
       <BackgroundEffects />
 

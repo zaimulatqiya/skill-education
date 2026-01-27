@@ -15,7 +15,7 @@ export const MENU_ITEMS: MenuCardProps[] = [
     hoverBorderClass: "hover:border-blue-500/40",
   },
   {
-    href: "#",
+    href: "/kelas-toefl",
     icon: BookOpen,
     title: "Info Kelas TOEFL Online",
     subtitle: "Persiapan intensif skor maksimal",
@@ -39,9 +39,9 @@ export const MENU_ITEMS: MenuCardProps[] = [
     hoverBorderClass: "hover:border-blue-500/40",
   },
   {
-    href: "#",
+    href: "/info-beasiswa",
     icon: GraduationCap,
-    title: "Info Beasiswa 50%",
+    title: "Info Beasiswa 50% Kampung Inggris",
     subtitle: "Program subsidi Kampung Inggris",
     iconColorClass: "text-blue-400",
     iconBgClass: "bg-blue-500/10",

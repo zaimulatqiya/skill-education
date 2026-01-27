@@ -1,6 +1,6 @@
 import { BackgroundEffects } from "@/components/landing-page/background-effects";
 import { FooterSection } from "@/components/landing-page/footer-section";
-import { CheckCircle2, Award, Clock, Smartphone, ShieldCheck, FileCheck, Landmark, GraduationCap, MapPin, Building2, AlertCircle, Globe, Zap, TrendingUp, Laptop, Medal, Users, ArrowDown } from "lucide-react";
+import { CheckCircle2, Award, Clock, Smartphone, ShieldCheck, FileCheck, Landmark, GraduationCap, MapPin, Building2, AlertCircle, Globe, Zap, TrendingUp, Laptop, Medal, Users, ArrowDown, QrCode, Info } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ export default function TestToeflPage() {
 
       <main className="relative z-10 w-full">
         {/* HERO SECTION */}
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-20 text-center container mx-auto max-w-5xl">
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-12 text-center container mx-auto max-w-5xl">
           <div className="space-y-6 flex flex-col items-center">
             {/* Logo */}
             <div className="relative mb-6 transform hover:scale-105 transition-transform duration-500">
@@ -26,13 +26,13 @@ export default function TestToeflPage() {
               <span className="text-white font-medium normal-case">Lembaga Kursus dan Pelatihan Bahasa Inggris</span>
             </h2>
             <p className="text-xs text-white/60 font-mono tracking-tight">
-              NPSN : K16907839 <span className="mx-2">|</span> SK DIKNAS : 421.9/308/418.49/2021
+              NPSN : K16907839 <span className="mx-2">|</span> SK DIKNAS No : 421.9/4657/418.20/2024
             </p>
 
             <div className="mt-8 space-y-4">
-              <h1 className="text-4xl md:text-6xl font-black text-white tracking-tight leading-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400">
-                <span className="block text-blue-400 text-3xl md:text-5xl mb-2">Gratis!!!</span>
-                Test TOEFL Prediction
+              <h1 className="text-2xl md:text-4xl font-black text-white tracking-tight leading-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400">
+                <span className="block text-blue-400 text-6xl md:text-6xl mb-2">Gratis!!!</span>
+                Test TOEFL
               </h1>
             </div>
 
@@ -54,8 +54,8 @@ export default function TestToeflPage() {
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">
-                  Keunggulan Kenapa Harus <br />
-                  <span className="text-blue-600">Mengikuti Program Ini?</span>
+                  Keunggulan Program <br />
+                  <span className="text-blue-600">Kenapa Harus Mengikuti Program Ini?</span>
                 </h2>
               </div>
               <div className="w-24 h-1 bg-slate-200 rounded-full"></div>
@@ -65,19 +65,19 @@ export default function TestToeflPage() {
               {/* Card 1 */}
               <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-blue-100 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Globe className="w-6 h-6" />
+                  <Medal className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Online System</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Test dikerjakan secara online via Web, bisa diakses dari mana saja.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Sertifikat Instan</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Dapatkan hasil tes dan sertifikat langsung setelah ujian selesai.</p>
               </div>
 
               {/* Card 2 */}
               <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-blue-100 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Zap className="w-6 h-6" />
+                  <Clock className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Percaya Diri</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Menjadikan percaya diri dalam menghadapi soal-soal TOEFL yang sebenarnya.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Waktu Fleksibel</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Akses tes kapan saja, tersedia 24/7 sesuai jadwal Anda.</p>
               </div>
 
               {/* Card 3 */}
@@ -85,8 +85,8 @@ export default function TestToeflPage() {
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Instant Result</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Skor TOEFL bisa langsung diketahui setelah menyelesaikan test.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Skor Real Time</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Nilai TOEFL muncul otomatis begitu tes berakhir.</p>
               </div>
 
               {/* Card 4 */}
@@ -94,17 +94,17 @@ export default function TestToeflPage() {
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Laptop className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Web Based</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Test dikerjakan secara Online Via Web tanpa perlu install aplikasi.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">100% Online</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Kerjakan dari mana saja via laptop atau smartphone.</p>
               </div>
 
               {/* Card 5 */}
               <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:border-blue-100 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Medal className="w-6 h-6" />
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Official Cert</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Sertifikat resmi dikeluarkan oleh lembaga "Mr. Language".</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Sertifikat Resmi</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Legalitas Resmi Lembaga Mr. Language Yang Sudah Ber SK Diknas.</p>
               </div>
 
               {/* Card 6 */}
@@ -112,8 +112,8 @@ export default function TestToeflPage() {
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Users className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Expert Made</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Seluruh soal test dibuat oleh tenaga ahli berpengalaman.</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Soal Berkualitas</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">Soal dibuat oleh tenaga ahli yang kompeten dan berpengalaman.</p>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function TestToeflPage() {
               <div className="relative md:order-1 order-2">
                 <div className="relative w-full max-w-sm mx-auto aspect-square bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full p-8 animate-pulse-glow">
                   <div className="w-full h-full bg-blue-600/10 rounded-full border border-blue-500/30 backdrop-blur-sm relative overflow-hidden">
-                    <Image src="/assets/transparant/13.png" alt="Student Success" fill className="object-cover object-top hover:scale-105 transition-transform duration-500" />
+                    <Image src="/assets/transparant/3.png" alt="Student Success" fill className="object-cover object-top hover:scale-105 transition-transform duration-500" />
                   </div>
                 </div>
               </div>
@@ -146,8 +146,7 @@ export default function TestToeflPage() {
                 {[
                   { text: "Persyaratan Sidang Skripsi Atau Wisuda", icon: GraduationCap },
                   { text: "Melamar Kerja Pemerintahan Atau Swasta", icon: Building2 },
-                  { text: "Pelengkap Lampiran Untuk Test CPNS dan BUMN", icon: FileCheck },
-                  { text: "Pelengkap Lampiran untuk Persyaratan S1, S2 atau S3 Dalam Negeri", icon: Landmark },
+                  { text: "Pelengkap Lampiran Untuk Melamar Kerja di Swasta atau Pemerintahan (CPNS, BUMN atau Kediknasan)", icon: FileCheck },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-4 p-5 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-xl transition-all duration-300 group cursor-default">
                     <div className="shrink-0 p-3 bg-blue-500/10 rounded-full group-hover:bg-blue-500 group-hover:text-white text-blue-400 transition-all">
@@ -162,15 +161,60 @@ export default function TestToeflPage() {
         </section>
 
         {/* CERTIFICATE PREVIEW SECTION */}
-        <section className="py-20 bg-white px-6">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold text-slate-900 mb-10 uppercase border-b-4 border-yellow-400 inline-block pb-2">Contoh Sertifikat TOEFL</h2>
+        <section className="py-24 bg-white px-6">
+          <div className="container mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 uppercase border-b-4 border-yellow-400 inline-block pb-2">Contoh Sertifikat TOEFL</h2>
+            </div>
 
-            <div className="bg-white p-2 rounded-xl border border-slate-200 shadow-2xl mb-10 transform hover:scale-[1.01] transition-transform duration-500 max-w-3xl mx-auto">
-              <div className="aspect-[1.414/1] w-full bg-slate-100 rounded-lg relative overflow-hidden flex items-center justify-center border border-slate-100">
-                {/* Placeholder Certificate Visual */}
+            <div className="grid lg:grid-cols-12 gap-12 items-center">
+              {/* Certificate Image */}
+              <div className="lg:col-span-7">
+                <div className="bg-white p-2 rounded-xl border border-slate-200 shadow-xl transform hover:scale-[1.01] transition-transform duration-500">
+                  <div className="w-full bg-slate-50 rounded-lg relative overflow-hidden border border-slate-100">
+                    <Image src="/assets/sertifikat.jpg" alt="Contoh Sertifikat TOEFL" width={1000} height={700} className="w-full h-auto" priority />
+                  </div>
+                </div>
+              </div>
 
-                <Image src="/assets/sertif.jpg" alt="Contoh Sertifikat TOEFL" fill className="object-contain" />
+              {/* Info Blocks */}
+              <div className="lg:col-span-5 flex flex-col gap-6">
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 hover:border-blue-100">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                      <Building2 className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Tentang Kami</h3>
+                  </div>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Nomor SK Diknas, yang berarti Mr.Language adalah lembaga yang sudah memiliki izin secara sah (Lulus melalui Audit) dari Diknas untuk mengadakan pelatihan Bahasa Inggris.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 hover:border-blue-100">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                      <QrCode className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Barcode</h3>
+                  </div>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Professional Barcode yang tercantum di dalam sertifikat secara langsung terhubung ke Web Tentang Surat Pernyataan dengan menampilkan Biodata beserta Nilainya sebagai bahan Validasi, sehingga sertifikat tidak dapat
+                    dimanipulasi.
+                  </p>
+                </div>
+
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 hover:border-blue-100">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
+                      <Info className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-lg font-bold text-slate-900">Note</h3>
+                  </div>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    Sudah Banyak Peserta (Alumni) kami yang menggunakan Sertifikat ini baik untuk keperluan pekerjaan maupun pendidikan. "Penerimaan atas sertifikat adalah sepenuhnya wewenang dari instansi yang dituju."
+                  </p>
+                </div>
               </div>
             </div>
           </div>

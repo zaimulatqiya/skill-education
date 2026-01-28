@@ -78,7 +78,7 @@ Memperbaiki Kulaitas Pendengaran Saat Seseorang Berbicara Bahasa Inggris"
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
         <div className="container px-4 mx-auto text-center relative z-10">
           <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-sm font-semibold mb-4 border border-white/20">LIMITED OFFER</span>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-2xl mx-auto font-light">Investasi kecil untuk Peluang besar di masa depan. Jangan lewatkan kesempatan ini.</p>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-2xl mx-auto font-light">Investasi kecil untuk peluang besar di masa depan. Jangan lewatkan kesempatan ini.</p>
           <ScrollButton
             targetId="daftar-sekarang"
             size="lg"

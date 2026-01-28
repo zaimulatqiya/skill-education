@@ -22,6 +22,13 @@ export default function Home() {
           ))}
         </nav>
 
+        {/* Legal Info */}
+        <div className="w-full text-center mt-6 mb-2">
+          <p className="text-[10px] sm:text-xs text-white/60 font-mono tracking-tight">
+            NPSN : K16907839 <span className="mx-2">|</span> SK DIKNAS No : 421.9/4657/418.20/2024
+          </p>
+        </div>
+
         {/* Social Media Section */}
         <SocialLinks />
 

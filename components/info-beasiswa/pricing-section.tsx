@@ -90,15 +90,6 @@ export function PricingSection() {
                   <div className="p-8 text-center bg-white">
                     <p className="text-red-400 line-through text-lg font-medium mb-1">{plan.originalPrice}</p>
                     <p className="text-slate-900 text-3xl font-bold tracking-tight">{plan.price}</p>
-                    <hr className="my-6 border-slate-100" />
-                    <button
-                      className={cn(
-                        "w-full py-3 rounded-lg font-semibold transition shadow-sm",
-                        plan.isBestValue ? "bg-blue-600 text-white hover:bg-blue-700 shadow-blue-600/30 shadow-lg" : "border border-blue-600 text-blue-600 hover:bg-blue-50",
-                      )}
-                    >
-                      Pilih Paket
-                    </button>
                   </div>
                 </div>
               ))}

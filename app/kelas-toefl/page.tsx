@@ -3,8 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { FooterSection } from "@/components/landing-page/footer-section";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Headphones, PenTool, FileText, Video, Users, MonitorPlay, CheckCircle2, Trophy, Globe, GraduationCap } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import { BookOpen, Headphones, PenTool, FileText, Video, Users, MonitorPlay, CheckCircle2, Trophy, Globe, GraduationCap, ClipboardCheck, Award } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
+import { ScrollButton } from "@/components/scroll-button";
 
 export default function ClassToeflPage() {
   return (
@@ -15,10 +16,10 @@ export default function ClassToeflPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
 
         <div className="container px-4 mx-auto text-center relative z-10">
-          <Image src="/assets/logo SE.png" alt="Study TOEFL Logo" width={250} height={90} className="mx-auto mb-6 h-16 w-auto object-contain" priority />
+          <Image src="/assets/logo-2.png" alt="Study TOEFL Logo" width={400} height={150} className="mx-auto mb-6 h-24 md:h-32 w-auto object-contain" priority />
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 max-w-4xl mx-auto leading-tight">
-            KELAS TOEFL <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ONLINE</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground mb-6 max-w-4xl mx-auto leading-tight">
+            KELAS TOEFL ONLINE <br /> <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">CUMA 99RB AJA</span>
           </h1>
 
           <h2 className="text-xl md:text-2xl font-medium text-muted-foreground mb-4 max-w-2xl mx-auto">Kuasai TOEFL Dengan Bimbingan Terarah.</h2>
@@ -34,24 +35,28 @@ export default function ClassToeflPage() {
       </section>
 
       {/* 2. MATERI YANG AKAN DIAJARKAN */}
-      <section className="py-20 bg-muted">
+      <section className="py-12 bg-muted">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">MATERI YANG AKAN DIAJARKAN</h2>
-            <p className="text-lg text-muted-foreground">Kurikulum berbasis TOEFL yang dirancang khusus untuk mempersiapkan kamu TOEFL. Bukan sekedar luar biasa.</p>
+            <p className="text-lg text-muted-foreground">Kurikulum berbasis TOEFL yang dirancang khusus untuk mempersiapkan TOEFL kamu. Bukan sekedar luar biasa.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <MateriCard icon={<Headphones className="w-10 h-10 text-primary" />} title="Listening Skill" description="Memastikan akurasi pendengaranmu untuk bahasa inggris." />
-            <MateriCard icon={<BookOpen className="w-10 h-10 text-primary" />} title="Reading Skill" description="Bacakan teks yang panjang yang membuat kamu cepat bosan." />
-            <MateriCard icon={<PenTool className="w-10 h-10 text-primary" />} title="Structure Skill" description='Dapatkan "skill" cara BAIK & BENAR bahasa inggris yang sederhana.' />
-            <MateriCard icon={<FileText className="w-10 h-10 text-primary" />} title="Written Expression" description="Mendeteksi kesalahan yang NGACO pada kalimat dan wacana yg ada di internet." />
+            <MateriCard
+              icon={<Headphones className="w-10 h-10 text-primary" />}
+              title="Listening Skill"
+              description="
+Memperbaiki Kulaitas Pendengaran Saat Seseorang Berbicara Bahasa Inggris"
+            />
+            <MateriCard icon={<BookOpen className="w-10 h-10 text-primary" />} title="Reading Skill" description="Meningkatkan Kemampuan dalam Memahami Teks Panjang Dengan Mudah Dalam Bahasa Inggris." />
+            <MateriCard icon={<PenTool className="w-10 h-10 text-primary" />} title="Structure & Written Expression Skill" description="Meningkatkan Kemampuan Analisa dalam Menyusun Kalimat Berbahasa Inggris." />
           </div>
         </div>
       </section>
 
       {/* 3. FASILITAS YANG KAMU DAPATKAN */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="py-12 relative overflow-hidden">
         <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
           <div className="w-64 h-64 rounded-full bg-primary blur-3xl"></div>
         </div>
@@ -59,32 +64,34 @@ export default function ClassToeflPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">FASILITAS YANG KAMU DAPATKAN</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <FasilitasCard icon={<MonitorPlay />} title="Get Live Handwritten Class" />
-            <FasilitasCard icon={<BookOpen />} title="e-Book Premium Strategy" />
+            <FasilitasCard icon={<MonitorPlay />} title="10x Live Interactive Class" />
+            <FasilitasCard icon={<BookOpen />} title="E-Book" />
             <FasilitasCard icon={<Video />} title="Video Recording" />
-            <FasilitasCard icon={<Users />} title="Privat Terbatas" />
+            <FasilitasCard icon={<ClipboardCheck />} title="FREE TEST TOEFL PREDICTION" />
+            <FasilitasCard icon={<Award />} title="Free E-Certificate (Bisa digunakan Untuk Daftar CPNS, BUMN, Kediknasan atau Lampiran Skripsi Maupun Wisuda)" />
           </div>
         </div>
       </section>
 
       {/* 4. LIMITED OFFER */}
-      <section className="py-24 bg-gradient-to-br from-primary via-primary/90 to-secondary text-primary-foreground relative overflow-hidden">
+      <section className="py-12 bg-gradient-to-br from-primary via-primary/90 to-secondary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
         <div className="container px-4 mx-auto text-center relative z-10">
           <span className="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-sm font-semibold mb-4 border border-white/20">LIMITED OFFER</span>
-          <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
-            KELAS TOEFL ONLINE <br />
-            <span className="text-yellow-300">CUMA 99rb AJA</span>
-          </h2>
-          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-2xl mx-auto font-light">Investasi kecil untuk diduang besar di masa depan. Jangan lewatkan kesempatan ini.</p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-10 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-200 h-auto">
-            Ambil Kursi Sekarang
-          </Button>
+          <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-2xl mx-auto font-light">Investasi kecil untuk Peluang besar di masa depan. Jangan lewatkan kesempatan ini.</p>
+          <ScrollButton
+            targetId="daftar-sekarang"
+            size="lg"
+            variant="secondary"
+            className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-10 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-200 h-auto"
+          >
+            Ambil Kuotamu Sekarang
+          </ScrollButton>
         </div>
       </section>
 
       {/* 5. PEMBUKA PELUANG MASA DEPANMU */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="container px-4 mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2 space-y-8">
@@ -92,27 +99,18 @@ export default function ClassToeflPage() {
                 BUKA PELUANG <br />
                 MASA DEPANMU
               </h2>
-              <p className="text-lg text-muted-foreground">Siaga "Siap" Tangga pilihan artian terkini & raih pendidikan terbaik gemilang pendidikan dan karir global.</p>
 
               <div className="space-y-4">
-                <FeatureItem text="Tambaa Peluang Impian" />
+                <FeatureItem text="Raih Peluang Impianmu" />
+                <FeatureItem text="Raih Prestasi & Sertifikat" />
                 <FeatureItem text="Raih Beasiswa Bergengsi!" />
-                <FeatureItem text="Raih Sertifikat & Prestasi" />
               </div>
             </div>
 
             <div className="lg:w-1/2">
               <div className="relative bg-muted rounded-3xl p-8 border border-border/50 shadow-xl">
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-secondary/20 rounded-full blur-xl"></div>
                 <div className="relative z-10">
-                  <blockquote className="text-xl font-medium italic text-foreground/80 mb-6">"Wah bergabung sama kali! Kertu-janya program kursus yang merubaca.co"</blockquote>
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-accent hidden sm:block"></div>
-                    <div>
-                      <div className="font-bold">Alumni Happy</div>
-                      <div className="text-sm text-muted-foreground">Student</div>
-                    </div>
-                  </div>
+                  <blockquote className="text-xl font-medium italic text-foreground/80 mb-6">"Jangan Kau Gantungkan Kemampuanmu Pada Para Joki, Karena Sejatinya Kamu Sangat Mampu."</blockquote>
                 </div>
               </div>
             </div>
@@ -121,7 +119,7 @@ export default function ClassToeflPage() {
       </section>
 
       {/* 6. TARGET SELAISI INI */}
-      <section className="py-20 bg-muted/50 border-y border-border/50">
+      <section className="py-12 bg-muted/50 border-y border-border/50">
         <div className="container px-4 mx-auto text-center">
           <div className="mb-12">
             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-2">TARGET SESI INI</h2>
@@ -131,19 +129,27 @@ export default function ClassToeflPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <TargetCard title="Target Pelajar" />
-            <TargetCard title="Sarjana Bingung" />
-            <TargetCard title="Obrolan Sampah Pekun" />
+            <TargetCard title="Pelajar" />
+            <TargetCard title="Mahasiswa" />
+            <TargetCard title="Dosen" />
+            <TargetCard title="Pemburu Beasiswa" />
+            <TargetCard title="Pekerja Instansi Pemerintah" />
           </div>
         </div>
       </section>
 
       {/* 7. SEGERA DAFTAR SEKARANG */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="daftar-sekarang" className="py-12 relative overflow-hidden">
         <div className="container px-4 mx-auto max-w-3xl text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">SEGERA DAFTAR SEKARANG</h2>
           <div className="bg-destructive/10 text-destructive font-semibold py-2 px-6 rounded-lg inline-block mb-6">Kuota Sangat Terbatas!</div>
-          <p className="text-xl text-muted-foreground mb-10">Promo ditutup dalam sekejap detik, jangan biarkan kesempatan lewat</p>
+          <p className="text-xl text-muted-foreground mb-10">Sebentar Lagi Promo Akan Segera Ditutup, Jangan Biarkan Kesempatanmu Hilang Begitu Saja</p>
+
+          <div className="flex justify-center gap-2 mb-8 text-blue-500">
+            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce" />
+            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce delay-100" />
+            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce delay-200" />
+          </div>
 
           <Button className="w-full md:w-auto text-lg px-12 py-8 rounded-2xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/25 border-t border-white/20">
             <span className="flex flex-col items-center">

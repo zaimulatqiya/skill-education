@@ -19,16 +19,6 @@ export default function TestToeflPage() {
               <Image src="/assets/logo SE.png" alt="Skill Education Logo" width={160} height={160} className="object-contain relative z-10" priority />
             </div>
 
-            {/* Title & Subtext */}
-            <h2 className="text-blue-400 font-bold uppercase tracking-widest text-sm md:text-base">
-              By Mr. Language
-              <br />
-              <span className="text-white font-medium normal-case">Lembaga Kursus dan Pelatihan Bahasa Inggris</span>
-            </h2>
-            <p className="text-xs text-white/60 font-mono tracking-tight">
-              NPSN : K16907839 <span className="mx-2">|</span> SK DIKNAS No : 421.9/4657/418.20/2024
-            </p>
-
             <div className="mt-8 space-y-4">
               <h1 className="text-2xl md:text-4xl font-black text-white tracking-tight leading-tight uppercase bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400">
                 <span className="block text-blue-400 text-6xl md:text-6xl mb-2">Gratis!!!</span>
@@ -77,7 +67,7 @@ export default function TestToeflPage() {
                   <Clock className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Waktu Fleksibel</h3>
-                <p className="text-slate-500 leading-relaxed text-sm">Akses tes kapan saja, tersedia 24/7 sesuai jadwal Anda.</p>
+                <p className="text-slate-500 leading-relaxed text-sm">WEB TEST bisa diakses kapanpun.</p>
               </div>
 
               {/* Card 3 */}
@@ -145,7 +135,7 @@ export default function TestToeflPage() {
               <div className="space-y-4 md:order-2 order-1">
                 {[
                   { text: "Persyaratan Sidang Skripsi Atau Wisuda", icon: GraduationCap },
-                  { text: "Melamar Kerja Pemerintahan Atau Swasta", icon: Building2 },
+                  { text: "Pelengkap Persyaratan Kuliah S1, S2, S3 Dalam Negeri", icon: Building2 },
                   { text: "Pelengkap Lampiran Untuk Melamar Kerja di Swasta atau Pemerintahan (CPNS, BUMN atau Kediknasan)", icon: FileCheck },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-4 p-5 bg-slate-800/50 hover:bg-slate-800 border border-slate-700 hover:border-blue-500 rounded-xl transition-all duration-300 group cursor-default">
@@ -187,7 +177,7 @@ export default function TestToeflPage() {
                     <h3 className="text-lg font-bold text-slate-900">Tentang Kami</h3>
                   </div>
                   <p className="text-slate-600 text-sm leading-relaxed">
-                    Nomor SK Diknas, yang berarti Mr.Language adalah lembaga yang sudah memiliki izin secara sah (Lulus melalui Audit) dari Diknas untuk mengadakan pelatihan Bahasa Inggris.
+                    Lembaga Mr. language Adalah Lembaga Yang Sudah Memiliki Izin Secara Sah (Lulus Melalui Audit) Dari Dinas Pendidikan Untuk Mengadakan Pelatihan Bahasa Inggris.
                   </p>
                 </div>
 
@@ -236,8 +226,7 @@ export default function TestToeflPage() {
               <ul className="space-y-3 list-disc pl-5">
                 <li>Hasil skor merupakan prediksi kemampuan bahasa Inggris (Prediction Test).</li>
                 <li>Kami tidak berafiliasi dengan ETS (Educational Testing Service).</li>
-                <li>Kebijakan penerimaan sertifikat sepenuhnya menjada hak institusi atau perusahaan tujuan.</li>
-                <li>Pastikan data diri yang diinput sesuai dengan identitas resmi (KTP/KTM).</li>
+                <li>Kebijakan penerimaan sertifikat sepenuhnya menjada hak institusi atau perusahaan yang dituju.</li>
                 <li>Sistem monitoring kami menjamin integritas pelaksanaan ujian.</li>
               </ul>
             </div>

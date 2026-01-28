@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Star, Sparkles } from "lucide-react";
 import Image from "next/image";
 
-const facilities = ["Program Super Intensive 1 Bulan", "Asrama English Area 24 Jam", "Modul Belajar Eksklusif", "Sertifikat Terakreditasi", "Merchandise & Kaos Eksklusif", "Pendampingan Tutor Professional"];
+const facilities = ["Modul atau Buku Panduan", "Program 5-6x Pertemuan / Hari", "Asrama", "English Zone", "Sertifikat", "T-Shirt Mr.Language", "Guru Profesional", "Gratis Penjemputan di Bandara / Stasiun Kediri / Terminal Pare (Pelayanan 24 Jam)"];
 
 export function FacilitiesSection() {
   return (

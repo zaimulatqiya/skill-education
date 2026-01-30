@@ -16,7 +16,7 @@ const pricingData = [
     duration: "2 Minggu",
     originalPrice: "Rp 1.200.000",
     price: "Rp 599.000",
-    isBestValue: true,
+    isBestValue: false,
   },
   {
     duration: "3 Minggu",
@@ -28,7 +28,7 @@ const pricingData = [
     duration: "1 Bulan",
     originalPrice: "Rp 1.600.000",
     price: "Rp 799.000",
-    isBestValue: false,
+    isBestValue: true,
   },
   {
     duration: "2 Bulan",

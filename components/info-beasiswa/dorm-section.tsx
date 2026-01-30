@@ -8,24 +8,36 @@ import { cn } from "@/lib/utils";
 
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=2070&auto=format&fit=crop",
-    alt: "Suasana Kelas yang Nyaman",
+    src: "/assets/gallery/foto6.jpg",
+    alt: "Hunian Strategis Modern",
   },
   {
-    src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
-    alt: "Fasilitas Belajar Modern",
+    src: "/assets/gallery/foto7.JPG",
+    alt: "Kamar Tidur yang Nyaman",
   },
   {
-    src: "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=2069&auto=format&fit=crop",
-    alt: "Asrama Bersih dan Rapi",
+    src: "/assets/gallery/foto8.JPG",
+    alt: "Parkir Luas Teratur",
   },
   {
-    src: "https://images.unsplash.com/photo-1544531696-fa377f0a716c?q=80&w=2069&auto=format&fit=crop",
-    alt: "Diskusi Kelompok Seru",
+    src: "/assets/gallery/foto1.JPG",
+    alt: "Lingkungan Aman dan Nyaman",
   },
   {
-    src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop",
-    alt: "Lingkungan English Area",
+    src: "/assets/gallery/foto2.JPG",
+    alt: "Ruang Santai",
+  },
+  {
+    src: "/assets/gallery/foto10.JPG",
+    alt: "Sanitasi Bersih dan Terawat",
+  },
+  {
+    src: "/assets/gallery/foto3.JPG",
+    alt: "Komunitas Pembelajar MR.Languange",
+  },
+  {
+    src: "/assets/gallery/foto4.JPG",
+    alt: "Belajar Seru Berkualitas",
   },
 ];
 

@@ -11,8 +11,8 @@ export default function TestToeflPage() {
 
       <main className="relative z-10 w-full">
         {/* HERO SECTION */}
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center px-6 py-12 text-center container mx-auto max-w-5xl">
-          <div className="space-y-6 flex flex-col items-center">
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-between pt-12 text-center container mx-auto max-w-5xl overflow-hidden">
+          <div className="space-y-6 flex flex-col items-center z-10">
             {/* Logo */}
             <div className="relative mb-6 transform hover:scale-105 transition-transform duration-500">
               <div className="absolute inset-0 bg-blue-500/30 rounded-full blur-2xl animate-pulse"></div>
@@ -24,16 +24,39 @@ export default function TestToeflPage() {
                 <span className="block text-blue-400 text-6xl md:text-6xl mb-2">Gratis!!!</span>
                 Test TOEFL
               </h1>
+              <p className="text-base md:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed tracking-wide px-4">Raih Score TOEFL Tertinggimu Dengan Mengikuti Program ini Untuk Mengetahui Seberapa Bagus Skill TOEFL mu</p>
+            </div>
+          </div>
+
+          {/* Hero Image - Pushed to bottom */}
+          <div className="relative mt-8 w-full max-w-md md:max-w-xl mx-auto h-[400px] md:h-[500px] lg:h-[600px] flex items-end justify-center">
+            {/* Decorative Background Elements */}
+            <div className="absolute inset-0 z-0 select-none pointer-events-none">
+              {/* Organic Blob 1: Bright Yellow (Top Right) */}
+              <div className="absolute top-0 right-0 md:-right-12 w-48 h-48 md:w-72 md:h-72 bg-yellow-400/20 rounded-full blur-[80px] mix-blend-screen animate-pulse"></div>
+
+              {/* Organic Blob 2: Cyan (Bottom Left) */}
+              <div className="absolute bottom-0 left-0 md:-left-12 w-56 h-56 md:w-80 md:h-80 bg-cyan-500/20 rounded-full blur-[80px] mix-blend-screen animate-pulse delay-1000"></div>
+
+              {/* Organic Blob 3: Center Accent */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-600/10 rounded-full blur-[60px]"></div>
+
+              {/* Small Scattered Circles / Particles */}
+              <div className="absolute top-[20%] right-[15%] w-3 h-3 bg-yellow-300 rounded-full shadow-[0_0_15px_rgba(253,224,71,0.5)] animate-bounce duration-[3000ms]"></div>
+              <div className="absolute bottom-[30%] left-[10%] w-2 h-2 bg-cyan-300 rounded-full shadow-[0_0_10px_rgba(103,232,249,0.5)] animate-bounce duration-[3000ms]"></div>
+              <div className="absolute top-[10%] left-[20%] w-4 h-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20"></div>
+
+              {/* Geometric Lines */}
+              <svg className="absolute top-0 right-0 w-32 h-32 opacity-20" viewBox="0 0 100 100">
+                <path d="M20,20 L80,20 L80,80" fill="none" stroke="white" strokeWidth="1" />
+              </svg>
+              <svg className="absolute bottom-0 left-0 w-32 h-32 opacity-20 rotate-180" viewBox="0 0 100 100">
+                <path d="M20,20 L80,20 L80,80" fill="none" stroke="white" strokeWidth="1" />
+              </svg>
             </div>
 
-            {/* Illustration Placeholder */}
-            <div className="relative mt-12 w-64 h-64 md:w-80 md:h-80 mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-full opacity-20 blur-3xl animate-pulse-glow"></div>
-              <div className="relative w-full h-full flex items-center justify-center">
-                <div className="absolute inset-4 bg-blue-900/30 border border-blue-500/30 rounded-full backdrop-blur-sm overflow-hidden flex items-end justify-center">
-                  <Image src="/assets/transparant/13.png" alt="Peserta TOEFL" fill className="object-cover object-top hover:scale-110 transition-transform duration-700" priority />
-                </div>
-              </div>
+            <div className="relative w-full h-full">
+              <Image src="/assets/transparant/5.png" alt="Peserta TOEFL" fill className="object-contain object-bottom relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out" priority />
             </div>
           </div>
         </section>
@@ -110,7 +133,7 @@ export default function TestToeflPage() {
         </section>
 
         {/* CERTIFICATE USAGE SECTION */}
-        <section className="py-20 bg-[#0B1120] px-6 text-white relative">
+        <section className="pt-20 pb-0 bg-[#0B1120] px-6 text-white relative overflow-hidden">
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-16">
               <h2 className="text-2xl md:text-3xl font-bold tracking-wide uppercase">Sertifikat Dapat Digunakan Sebagai</h2>
@@ -121,18 +144,19 @@ export default function TestToeflPage() {
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-end">
               {/* Image Side */}
-              <div className="relative md:order-1 order-2">
-                <div className="relative w-full max-w-sm mx-auto aspect-square bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full p-8 animate-pulse-glow">
-                  <div className="w-full h-full bg-blue-600/10 rounded-full border border-blue-500/30 backdrop-blur-sm relative overflow-hidden">
-                    <Image src="/assets/transparant/3.png" alt="Student Success" fill className="object-cover object-top hover:scale-105 transition-transform duration-500" />
-                  </div>
+              <div className="relative md:order-1 order-2 h-[400px] md:h-[500px]">
+                <div className="absolute inset-x-0 bottom-0 top-0 mx-auto w-full max-w-[400px]">
+                  {/* Glow Behind */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[120%] h-[60%] bg-blue-500/20 blur-[80px] rounded-full pointer-events-none"></div>
+
+                  <Image src="/assets/transparant/3.png" alt="Student Success" fill className="object-contain object-bottom relative z-10 drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out" />
                 </div>
               </div>
 
               {/* List Side */}
-              <div className="space-y-4 md:order-2 order-1">
+              <div className="space-y-4 md:order-2 order-1 pb-12 md:pb-20">
                 {[
                   { text: "Persyaratan Sidang Skripsi Atau Wisuda", icon: GraduationCap },
                   { text: "Pelengkap Persyaratan Kuliah S1, S2, S3 Dalam Negeri", icon: Building2 },
@@ -176,9 +200,7 @@ export default function TestToeflPage() {
                     </div>
                     <h3 className="text-lg font-bold text-slate-900">Tentang Kami</h3>
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    Lembaga Mr. language Adalah Lembaga Yang Sudah Memiliki Izin Secara Sah (Lulus Melalui Audit) Dari Dinas Pendidikan Untuk Mengadakan Pelatihan Bahasa Inggris.
-                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">Lembaga Mr. language Adalah Lembaga Yang Sudah Memiliki Izin Secara Sah (Lulus Melalui Audit) Dari Dinas Pendidikan Untuk Mengadakan Pelatihan Bahasa Inggris.</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 hover:border-blue-100">
@@ -226,7 +248,7 @@ export default function TestToeflPage() {
               <ul className="space-y-3 list-disc pl-5">
                 <li>Hasil skor merupakan prediksi kemampuan bahasa Inggris (Prediction Test).</li>
                 <li>Kami tidak berafiliasi dengan ETS (Educational Testing Service).</li>
-                <li>Kebijakan penerimaan sertifikat sepenuhnya menjada hak institusi atau perusahaan yang dituju.</li>
+                <li>Kebijakan penerimaan sertifikat sepenuhnya menjadi hak institusi atau perusahaan yang dituju.</li>
                 <li>Sistem monitoring kami menjamin integritas pelaksanaan ujian.</li>
               </ul>
             </div>

@@ -39,7 +39,9 @@ export default function ClassToeflPage() {
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">MATERI YANG AKAN DIAJARKAN</h2>
-            <p className="text-lg text-muted-foreground">Kurikulum berbasis TOEFL yang dirancang khusus untuk mempersiapkan TOEFL kamu. Bukan sekedar luar biasa.</p>
+            <p className="text-lg text-muted-foreground">
+              Kurikulum berbasis TOEFL yang dirancang khusus untuk meraih score tertinggi dengan mengoptimalkan skill dalam memahami soal soal TOEFL dengan mudah. bukan sekedar bimbingan kelas biasa.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -47,7 +49,7 @@ export default function ClassToeflPage() {
               icon={<Headphones className="w-10 h-10 text-primary" />}
               title="Listening Skill"
               description="
-Memperbaiki Kulaitas Pendengaran Saat Seseorang Berbicara Bahasa Inggris"
+Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
             />
             <MateriCard icon={<BookOpen className="w-10 h-10 text-primary" />} title="Reading Skill" description="Meningkatkan Kemampuan dalam Memahami Teks Panjang Dengan Mudah Dalam Bahasa Inggris." />
             <MateriCard icon={<PenTool className="w-10 h-10 text-primary" />} title="Structure & Written Expression Skill" description="Meningkatkan Kemampuan Analisa dalam Menyusun Kalimat Berbahasa Inggris." />
@@ -128,6 +130,7 @@ Memperbaiki Kulaitas Pendengaran Saat Seseorang Berbicara Bahasa Inggris"
             </div>
           </div>
 
+          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-foreground/90">Sangat Cocok Untuk</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <TargetCard title="Pelajar" />
             <TargetCard title="Mahasiswa" />

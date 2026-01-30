@@ -8,7 +8,7 @@ export function LocationSection() {
     <section className="relative w-full h-[500px] md:h-[600px] bg-[#0B1221] overflow-hidden">
       {/* Google Maps Embed Background */}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15814.995393285746!2d112.1646279!3d-7.7675762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785cf0887e0767%3A0xe962534f3ad46870!2sKampung%20Inggris%20Pare!5e0!3m2!1sid!2sid!4v1706346782392!5m2!1sid!2sid"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.3249598803336!2d112.1854475!3d-7.7553175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785dc5baf4d0b5%3A0x1fdfe11d14077470!2sMr.Language%20Kampung%20Inggris!5e0!3m2!1sid!2sid!4v1769660372058!5m2!1sid!2sid"
         width="100%"
         height="100%"
         className="absolute inset-0 border-0 filter grayscale-[20%] opacity-80 md:opacity-100" // Slightly dimmed on mobile for better overlay visibility
@@ -43,7 +43,7 @@ export function LocationSection() {
             <p className="text-slate-500 text-sm mb-6">Pusat pembelajaran bahasa terbesar di Indonesia</p>
 
             <a
-              href="https://maps.app.goo.gl/j4VstBCNcCwynLtX9"
+              href="https://maps.app.goo.gl/XXKigds4HbTNiyqv8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#2563EB] hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg hover:shadow-blue-500/30 active:scale-95 group"

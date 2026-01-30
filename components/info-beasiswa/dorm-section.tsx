@@ -32,11 +32,11 @@ const images = [
     alt: "Sanitasi Bersih dan Terawat",
   },
   {
-    src: "/assets/gallery/foto3.jpg",
+    src: "/assets/gallery/foto3.JPG",
     alt: "Komunitas Pembelajar MR.Languange",
   },
   {
-    src: "/assets/gallery/foto4.jpg",
+    src: "/assets/gallery/foto4.JPG",
     alt: "Belajar Seru Berkualitas",
   },
 ];

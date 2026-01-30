@@ -12,31 +12,31 @@ const images = [
     alt: "Hunian Strategis Modern",
   },
   {
-    src: "/assets/gallery/foto7.JPG",
+    src: "/assets/gallery/foto7.jpg",
     alt: "Kamar Tidur yang Nyaman",
   },
   {
-    src: "/assets/gallery/foto8.JPG",
+    src: "/assets/gallery/foto8.jpg",
     alt: "Parkir Luas Teratur",
   },
   {
-    src: "/assets/gallery/foto1.JPG",
+    src: "/assets/gallery/foto1.jpg",
     alt: "Lingkungan Aman dan Nyaman",
   },
   {
-    src: "/assets/gallery/foto2.JPG",
+    src: "/assets/gallery/foto2.jpg",
     alt: "Ruang Santai",
   },
   {
-    src: "/assets/gallery/foto10.JPG",
+    src: "/assets/gallery/foto10.jpg",
     alt: "Sanitasi Bersih dan Terawat",
   },
   {
-    src: "/assets/gallery/foto3.JPG",
+    src: "/assets/gallery/foto3.jpg",
     alt: "Komunitas Pembelajar MR.Languange",
   },
   {
-    src: "/assets/gallery/foto4.JPG",
+    src: "/assets/gallery/foto4.jpg",
     alt: "Belajar Seru Berkualitas",
   },
 ];

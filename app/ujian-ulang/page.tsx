@@ -25,7 +25,7 @@ export default function UjianUlangPage() {
         {/* Main Card */}
         <div className="w-full max-w-lg rounded-3xl border border-slate-800 bg-slate-900/50 backdrop-blur-xl shadow-2xl shadow-black/40">
           {/* Header Section */}
-          <div className="border-b border-slate-800/60 bg-white/5 px-6 py-8 text-center sm:px-8">
+          <div className="border-b border-slate-800/60 bg-white/5 rounded-t-3xl px-6 py-8 text-center sm:px-8">
             <h2 className="text-lg font-medium leading-snug text-white sm:text-xl">
               Syarat Mengikuti <span className="text-blue-400">Ujian Ulang</span> TEST TOEFL
             </h2>
@@ -78,6 +78,18 @@ export default function UjianUlangPage() {
               </div>
             </div>
 
+            {/* Warning Block */}
+            <div className="relative overflow-hidden rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
+              <div className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-amber-500/10 blur-xl" />
+              <div className="relative flex gap-3">
+                <TriangleAlert className="mt-0.5 shrink-0 text-amber-400 w-6 h-6" />
+                <div className="space-y-1">
+                  <h4 className="text-sm font-semibold tracking-wide text-amber-200 uppercase">Warning !!!</h4>
+                  <p className="text-sm leading-relaxed text-amber-200/70">Jangan klik syarat nomer 3 sebelum syarat nomer 1 & 2 terpenuhi. Data tidak akan terinput otomatis jika Anda melewati langkah sebelumnya.</p>
+                </div>
+              </div>
+            </div>
+
             {/* Step 3 */}
             <div className="group relative rounded-2xl border border-slate-800 bg-slate-900/40 p-5 transition-all hover:border-slate-700 hover:bg-slate-800/50">
               <div className="flex items-start gap-4">
@@ -100,17 +112,7 @@ export default function UjianUlangPage() {
               </div>
             </div>
 
-            {/* Warning Block */}
-            <div className="relative overflow-hidden rounded-xl border border-amber-500/20 bg-amber-500/5 p-5">
-              <div className="absolute -left-4 -top-4 h-16 w-16 rounded-full bg-amber-500/10 blur-xl" />
-              <div className="relative flex gap-3">
-                <TriangleAlert className="mt-0.5 shrink-0 text-amber-400 w-6 h-6" />
-                <div className="space-y-1">
-                  <h4 className="text-sm font-semibold tracking-wide text-amber-200 uppercase">Warning !!!</h4>
-                  <p className="text-sm leading-relaxed text-amber-200/70">Jangan klik syarat nomer 3 sebelum syarat nomer 1 & 2 terpenuhi. Data tidak akan terinput otomatis jika Anda melewati langkah sebelumnya.</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </main>

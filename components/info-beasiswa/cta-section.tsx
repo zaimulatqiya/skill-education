@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowDown, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
+import { RegistrationModal } from "@/app/kelas-toefl/registration-modal";
 
 // Placeholder for user avatars
 const avatars = [
@@ -11,13 +13,12 @@ const avatars = [
   "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=64&h=64&auto=format&fit=crop",
 ];
 
-
-
 export function CTASection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative py-12 px-4 md:px-6 bg-slate-50 overflow-hidden">
       {/* Floating Decorative Elements (Avatars) */}
-      
 
       <div className="container mx-auto max-w-4xl relative z-10">
         <motion.div
@@ -27,7 +28,6 @@ export function CTASection() {
           viewport={{ once: true }}
           className="bg-white rounded-[3rem] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] text-center relative overflow-hidden"
         >
-
           {/* Badge */}
           <div className="inline-block bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6">BERGABUNG SEKARANG</div>
 
@@ -45,11 +45,14 @@ export function CTASection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all w-full md:w-auto min-w-[200px]"
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all w-full md:w-auto min-w-[200px] cursor-pointer"
           >
             DAFTAR SEKARANG
           </motion.button>
         </motion.div>
+
+        <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
         <div className="mt-8 text-center">
           <p className="text-slate-400 text-sm">Gratis pendaftaran. Tidak perlu kartu kredit. Batalkan kapan saja.</p>

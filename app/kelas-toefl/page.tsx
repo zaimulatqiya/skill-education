@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
+import { RegistrationModal } from "./registration-modal";
 import Link from "next/link";
 import Image from "next/image";
 import { FooterSection } from "@/components/landing-page/footer-section";
@@ -8,6 +11,8 @@ import { ArrowRight, ArrowDown } from "lucide-react";
 import { ScrollButton } from "@/components/scroll-button";
 
 export default function ClassToeflPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-background font-sans overflow-x-hidden">
       {/* 1. HERO SECTION */}
@@ -154,13 +159,14 @@ Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
             <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce delay-200" />
           </div>
 
-          <Button className="w-full md:w-auto text-lg px-12 py-8 rounded-2xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/25 border-t border-white/20">
+          <Button onClick={() => setIsModalOpen(true)} className="w-full md:w-auto text-lg px-12 py-8 rounded-2xl bg-primary hover:bg-primary/90 shadow-xl shadow-primary/25 border-t border-white/20 active:scale-[0.98] cursor-pointer">
             <span className="flex flex-col items-center">
               <span className="font-bold">DAFTAR SEKARANG</span>
               <span className="text-sm font-normal opacity-90">Hanya 99rb</span>
             </span>
             <ArrowRight className="ml-3 w-6 h-6" />
           </Button>
+          <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </div>
       </section>
 

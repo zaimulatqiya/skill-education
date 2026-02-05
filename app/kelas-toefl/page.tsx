@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { RegistrationModal } from "./registration-modal";
+import { RegistrationModal } from "../../components/registration-modal";
 import Link from "next/link";
 import Image from "next/image";
 import { FooterSection } from "@/components/landing-page/footer-section";
@@ -49,7 +49,7 @@ export default function ClassToeflPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <MateriCard
               icon={<Headphones className="w-10 h-10 text-primary" />}
               title="Listening Skill"
@@ -70,7 +70,7 @@ Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
         <div className="container px-4 mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">FASILITAS YANG KAMU DAPATKAN</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <FasilitasCard icon={<MonitorPlay />} title="10x Live Interactive Class" />
             <FasilitasCard icon={<BookOpen />} title="E-Book" />
             <FasilitasCard icon={<Video />} title="Video Recording" />
@@ -115,9 +115,12 @@ Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
             </div>
 
             <div className="lg:w-1/2">
-              <div className="relative bg-muted rounded-3xl p-8 border border-border/50 shadow-xl">
+              <div className="relative bg-muted rounded-3xl p-8 border border-border/50 shadow-xl overflow-hidden">
+                <div className="absolute top-0 right-0 p-4 opacity-[0.03]">
+                  <GraduationCap className="w-48 h-48" />
+                </div>
                 <div className="relative z-10">
-                  <blockquote className="text-xl font-medium italic text-foreground/80 mb-6">"Jangan Kau Gantungkan Kemampuanmu Pada Para Joki, Karena Sejatinya Kamu Sangat Mampu."</blockquote>
+                  <blockquote className="text-xl lg:text-2xl font-medium italic text-foreground/80 mb-6">"Jangan Kau Gantungkan Kemampuanmu Pada Para Joki, Karena Sejatinya Kamu Sangat Mampu."</blockquote>
                 </div>
               </div>
             </div>
@@ -136,7 +139,7 @@ Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
           </div>
 
           <h3 className="text-2xl md:text-3xl font-bold mb-8 text-foreground/90">Sangat Cocok Untuk</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mx-auto">
             <TargetCard title="Pelajar" />
             <TargetCard title="Mahasiswa" />
             <TargetCard title="Dosen" />

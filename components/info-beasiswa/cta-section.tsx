@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
-import { RegistrationModal } from "@/app/kelas-toefl/registration-modal";
+import { RegistrationModal } from "@/components/registration-modal";
 
 // Placeholder for user avatars
 const avatars = [

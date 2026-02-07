@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, User, MapPin, Calendar, Phone, ChevronDown } from "lucide-react";
+import { X, User, MapPin, Calendar, Phone, ChevronDown, Loader2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
@@ -17,6 +17,7 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
     birthDate: "",
     whatsapp: "",
   });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
@@ -29,16 +30,27 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
     };
   }, [isOpen]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+
+    // Simulate network request
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     // Handle form submission logic here
     console.log("Form submitted:", formData);
 
     // Construct WhatsApp message
-    const message = `Halo, saya ingin mendaftar TOEFL Prediction.\nData Diri:\nNama: ${formData.fullName}\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}`;
+    const message = `Halo, saya ingin mendaftar TOEFL Prediction.\n\nData Diri:\nNama: ${formData.fullName}\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/+62 85196183500?text=${encodedMessage}`; // Replace number with actual one if known, using placeholder
+    const whatsappUrl = `https://wa.me/6289521116925?text=${encodedMessage}`; // Replace number with actual one if known, using placeholder
 
+    // Track Lead event
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Lead");
+    }
+
+    setLoading(false);
     window.open(whatsappUrl, "_blank");
     onClose();
   };
@@ -160,9 +172,21 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-bold py-4 rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transform hover:-translate-y-0.5 transition-all duration-200 cursor-pointer active:scale-[0.98]"
+                      disabled={loading || !formData.fullName || !formData.birthPlace || !formData.birthDate || !formData.whatsapp}
+                      className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center ${
+                        loading || !formData.fullName || !formData.birthPlace || !formData.birthDate || !formData.whatsapp
+                          ? "bg-muted text-muted-foreground cursor-not-allowed shadow-none"
+                          : "bg-primary hover:bg-primary/90 text-primary-foreground shadow-primary/20 hover:shadow-primary/30 transform hover:-translate-y-0.5 cursor-pointer active:scale-[0.98]"
+                      }`}
                     >
-                      Kirim Pendaftaran
+                      {loading ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Memproses...
+                        </>
+                      ) : (
+                        "Kirim Pendaftaran"
+                      )}
                     </button>
                     <p className="text-center text-xs text-muted-foreground mt-4">Data Anda aman dan hanya digunakan untuk keperluan pendaftaran.</p>
                   </div>

@@ -1,15 +1,15 @@
+"use client";
+
 import React from "react";
 import type { Metadata } from "next";
 import { LoadingLink } from "@/components/loading-link";
+import { useLandingPageLinks } from "@/hooks/use-landing-page-links";
 import Image from "next/image";
 import { AtSign, Instagram, TriangleAlert, Users } from "lucide-react";
 
-export const metadata: Metadata = {
-  title: "Ujian Ulang Test TOEFL | Skill Education",
-  description: "Syarat dan panduan untuk mengikuti ujian ulang Test TOEFL di Skill Education.",
-};
-
 export default function UjianUlangPage() {
+  const { links } = useLandingPageLinks();
+
   return (
     <div className="bg-slate-50 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-700 min-h-screen relative overflow-x-hidden">
       {/* Background Effects */}
@@ -46,7 +46,7 @@ export default function UjianUlangPage() {
                     <p className="mt-1 text-sm md:text-base leading-relaxed text-slate-500">Tag 3 temenmu di kolom komentar postingan Instagram Skill Education.</p>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href={links?.ujian_ulang.instagram_post || "#"}
                     className="inline-flex items-center gap-2 rounded-lg bg-blue-50 px-4 py-2 text-sm md:text-base font-medium text-blue-700 transition-colors hover:bg-blue-100 border border-blue-200 hover:border-blue-300 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <AtSign className="w-[18px] h-[18px] md:w-5 md:h-5" />
@@ -68,7 +68,7 @@ export default function UjianUlangPage() {
                     <p className="mt-1 text-sm md:text-base leading-relaxed text-slate-500">Wajib follow akun Instagram resmi Skill Education.</p>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href={links?.ujian_ulang.instagram_account || "#"}
                     className="inline-flex items-center gap-2 rounded-lg bg-pink-50 px-4 py-2 text-sm md:text-base font-medium text-pink-700 transition-colors hover:bg-pink-100 border border-pink-200 hover:border-pink-300 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <Instagram className="w-[18px] h-[18px] md:w-5 md:h-5" />
@@ -102,7 +102,7 @@ export default function UjianUlangPage() {
                     <p className="mt-1 text-sm md:text-base leading-relaxed text-slate-500">Langkah terakhir, bergabunglah ke dalam grup peserta.</p>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href={links?.ujian_ulang.group || "#"}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-emerald-400 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold text-white shadow-lg shadow-emerald-200 transition-all hover:brightness-105 active:scale-[0.98]"
                   >
                     <Users className="w-5 h-5 md:w-6 md:h-6" />

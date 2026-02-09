@@ -1,17 +1,17 @@
+"use client";
+
 import React from "react";
 import type { Metadata } from "next";
 import { LoadingLink } from "@/components/loading-link";
+import { useLandingPageLinks } from "@/hooks/use-landing-page-links";
 import Image from "next/image";
 import { Send, TriangleAlert, Users } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-export const metadata: Metadata = {
-  title: "Daftar TOEFL | Skill Education",
-  description: "Syarat dan panduan untuk mendaftar TOEFL di Skill Education.",
-};
-
 export default function DaftarToeflPage() {
+  const { links, loading } = useLandingPageLinks();
+
   return (
     <div className="bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 selection:text-blue-200 min-h-screen relative overflow-x-hidden">
       {/* Background Effects */}
@@ -47,7 +47,7 @@ export default function DaftarToeflPage() {
                     <h3 className="font-medium text-white md:text-lg">Join Saluran WhatsApp</h3>
                   </div>
                   <LoadingLink
-                    href="https://whatsapp.com/channel/0029Vb5s1lqG3R3lcN1w522t"
+                    href={links?.test_toefl.whatsapp || "#"}
                     className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm md:text-base font-medium text-white transition-colors hover:bg-green-600 hover:text-white border border-slate-700 hover:border-green-500/50 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <FontAwesomeIcon icon={faWhatsapp} className="h-[18px] w-[18px] md:h-5 md:w-5" />
@@ -68,7 +68,7 @@ export default function DaftarToeflPage() {
                     <h3 className="font-medium text-white md:text-lg">Join Saluran Telegram</h3>
                   </div>
                   <LoadingLink
-                    href="https://t.me/parekampunginggris"
+                    href={links?.test_toefl.telegram || "#"}
                     className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm md:text-base font-medium text-white transition-colors hover:bg-sky-600 hover:text-white border border-slate-700 hover:border-sky-500/50 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <Send className="w-[18px] h-[18px] md:w-5 md:h-5" />
@@ -101,7 +101,7 @@ export default function DaftarToeflPage() {
                     <h3 className="font-medium text-white md:text-lg">Gabung Group</h3>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href={links?.test_toefl.group || "#"}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-500 px-4 py-2.5 md:py-3 text-sm md:text-base font-semibold text-white shadow-lg shadow-emerald-500/20 transition-all hover:brightness-110 active:scale-[0.98]"
                   >
                     <Users className="w-5 h-5 md:w-6 md:h-6" />

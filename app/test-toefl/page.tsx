@@ -272,8 +272,8 @@ export default function TestToeflPage() {
               </div>
             </div>
 
-            <Link href="#" className="block w-full max-w-sm mx-auto">
-              <button className="w-full h-16 text-lg font-bold bg-blue-600 hover:bg-blue-500 text-white rounded-xl shadow-lg shadow-blue-900/40 hover:scale-105 transition-all duration-300 active:scale-95 border-b-4 border-blue-800 hover:border-blue-700">
+            <Link href="/daftar-toefl" className="block w-full max-w-sm mx-auto">
+              <button className="w-full h-16 text-lg font-bold bg-blue-600 hover:bg-blue-500 text-white rounded-xl shadow-lg shadow-blue-900/40 hover:scale-105 transition-all duration-300 active:scale-95 border-b-4 border-blue-800 hover:border-blue-700 cursor-pointer">
                 DAFTAR SEKARANG
               </button>
             </Link>

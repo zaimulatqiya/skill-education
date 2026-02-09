@@ -27,7 +27,7 @@ export const MENU_ITEMS: MenuCardProps[] = [
     hoverBorderClass: "hover:border-blue-500/40",
   },
   {
-    href: "/test-toefl-online",
+    href: "/test-toefl",
     icon: FileCheck,
     title: "Info Test TOEFL Online",
     subtitle: "Sertifikasi resmi dan terpercaya",

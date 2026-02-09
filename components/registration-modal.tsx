@@ -8,9 +8,10 @@ import Image from "next/image";
 interface RegistrationModalProps {
   isOpen: boolean;
   onClose: () => void;
+  source?: "beasiswa" | "toefl-online" | "default";
 }
 
-export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
+export function RegistrationModal({ isOpen, onClose, source = "default" }: RegistrationModalProps) {
   const [formData, setFormData] = useState({
     fullName: "",
     birthPlace: "",
@@ -41,9 +42,17 @@ export function RegistrationModal({ isOpen, onClose }: RegistrationModalProps) {
     console.log("Form submitted:", formData);
 
     // Construct WhatsApp message
-    const message = `Halo, saya ingin mendaftar TOEFL Prediction.\n\nData Diri:\nNama: ${formData.fullName}\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}`;
+    let message = "";
+    if (source === "beasiswa") {
+      message = `Halo admin, saya ingin mendaftar Program Beasiswa 50% Kampung Inggris.\n\nBiodata saya :\nNama : ${formData.fullName}\nTempat Lahir : ${formData.birthPlace}\nTanggal Lahir : ${formData.birthDate}\nWhatsApp : ${formData.whatsapp}`;
+    } else if (source === "toefl-online") {
+      message = `Halo admin, saya ingin mendaftar Kelas TOEFL Online.\n\nBiodata saya :\nNama : ${formData.fullName}\nTempat Lahir : ${formData.birthPlace}\nTanggal Lahir : ${formData.birthDate}\nWhatsApp : ${formData.whatsapp}`;
+    } else {
+      message = `Halo, saya ingin mendaftar TOEFL Prediction.\n\nData Diri:\nNama: ${formData.fullName}\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}`;
+    }
+
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/6289521116925?text=${encodedMessage}`; // Replace number with actual one if known, using placeholder
+    const whatsappUrl = `https://wa.me/6289521116925?text=${encodedMessage}`;
 
     // Track Lead event
     if (typeof window !== "undefined" && (window as any).fbq) {

@@ -47,7 +47,7 @@ export default function DaftarToeflPage() {
                     <h3 className="font-medium text-white md:text-lg">Join Saluran WhatsApp</h3>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href="https://whatsapp.com/channel/0029Vb5s1lqG3R3lcN1w522t"
                     className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm md:text-base font-medium text-white transition-colors hover:bg-green-600 hover:text-white border border-slate-700 hover:border-green-500/50 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <FontAwesomeIcon icon={faWhatsapp} className="h-[18px] w-[18px] md:h-5 md:w-5" />
@@ -68,7 +68,7 @@ export default function DaftarToeflPage() {
                     <h3 className="font-medium text-white md:text-lg">Join Saluran Telegram</h3>
                   </div>
                   <LoadingLink
-                    href="#"
+                    href="https://t.me/parekampunginggris"
                     className="inline-flex items-center gap-2 rounded-lg bg-slate-800 px-4 py-2 text-sm md:text-base font-medium text-white transition-colors hover:bg-sky-600 hover:text-white border border-slate-700 hover:border-sky-500/50 active:scale-[0.98] w-full justify-center md:py-2.5"
                   >
                     <Send className="w-[18px] h-[18px] md:w-5 md:h-5" />

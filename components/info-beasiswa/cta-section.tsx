@@ -52,7 +52,7 @@ export function CTASection() {
           </motion.button>
         </motion.div>
 
-        <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} source="beasiswa" />
 
         <div className="mt-8 text-center">
           <p className="text-slate-400 text-sm">Gratis pendaftaran. Tidak perlu kartu kredit. Batalkan kapan saja.</p>

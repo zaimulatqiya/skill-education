@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface LoadingLinkProps {
@@ -11,33 +9,15 @@ interface LoadingLinkProps {
 }
 
 export const LoadingLink = ({ href, className, children }: LoadingLinkProps) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const isInvalid = !href || href === "#";
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    if (isLoading) return;
-
-    setIsLoading(true);
-
-    // Simulate loading delay before opening new tab
-    setTimeout(() => {
-      window.open(href, "_blank", "noopener,noreferrer");
-      setIsLoading(false);
-    }, 1500);
-  };
+  if (isInvalid) {
+    return <div className={cn(className, "cursor-not-allowed opacity-70")}>{children}</div>;
+  }
 
   return (
-    <a href={href} className={cn("relative", className)} onClick={handleClick}>
-      {isLoading ? (
-        <>
-          <span className="opacity-0 flex items-center gap-2">{children}</span>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <Loader2 className="w-5 h-5 animate-spin" />
-          </div>
-        </>
-      ) : (
-        children
-      )}
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+      {children}
     </a>
   );
 };

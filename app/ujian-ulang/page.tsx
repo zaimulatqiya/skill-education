@@ -1,14 +1,12 @@
-"use client";
-
 import React from "react";
 import type { Metadata } from "next";
 import { LoadingLink } from "@/components/loading-link";
-import { useLandingPageLinks } from "@/hooks/use-landing-page-links";
+import { getLandingPageLinks } from "@/lib/get-landing-page-links";
 import Image from "next/image";
 import { AtSign, Instagram, TriangleAlert, Users } from "lucide-react";
 
-export default function UjianUlangPage() {
-  const { links } = useLandingPageLinks();
+export default async function UjianUlangPage() {
+  const links = await getLandingPageLinks();
 
   return (
     <div className="bg-slate-50 text-slate-900 antialiased selection:bg-blue-100 selection:text-blue-700 min-h-screen relative overflow-x-hidden">

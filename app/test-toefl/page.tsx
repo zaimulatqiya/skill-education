@@ -1,3 +1,5 @@
+"use client";
+
 import { BackgroundEffects } from "@/components/landing-page/background-effects";
 import { FooterSection } from "@/components/landing-page/footer-section";
 import { CheckCircle2, Award, Clock, Smartphone, ShieldCheck, FileCheck, Landmark, GraduationCap, MapPin, Building2, AlertCircle, Globe, Zap, TrendingUp, Laptop, Medal, Users, ArrowDown, QrCode, Info } from "lucide-react";
@@ -5,6 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function TestToeflPage() {
+  const handleLead = () => {
+    if (typeof window !== "undefined" && (window as any).fbq) {
+      (window as any).fbq("track", "Lead");
+    }
+  };
   return (
     <div className="min-h-screen w-full bg-[#02040a] text-slate-300 font-sans selection:bg-blue-500/30 selection:text-blue-200 overflow-x-hidden">
       <BackgroundEffects />
@@ -272,7 +279,7 @@ export default function TestToeflPage() {
               </div>
             </div>
 
-            <Link href="/daftar-toefl" className="block w-full max-w-sm mx-auto">
+            <Link href="/daftar-toefl" target="_blank" onClick={handleLead} className="block w-full max-w-sm mx-auto">
               <button className="w-full h-16 text-lg font-bold bg-blue-600 hover:bg-blue-500 text-white rounded-xl shadow-lg shadow-blue-900/40 hover:scale-105 transition-all duration-300 active:scale-95 border-b-4 border-blue-800 hover:border-blue-700 cursor-pointer">
                 DAFTAR SEKARANG
               </button>

@@ -1,16 +1,14 @@
-"use client";
-
 import React from "react";
 import type { Metadata } from "next";
 import { LoadingLink } from "@/components/loading-link";
-import { useLandingPageLinks } from "@/hooks/use-landing-page-links";
+import { getLandingPageLinks } from "@/lib/get-landing-page-links";
 import Image from "next/image";
 import { Send, TriangleAlert, Users } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-export default function DaftarToeflPage() {
-  const { links, loading } = useLandingPageLinks();
+export default async function DaftarToeflPage() {
+  const links = await getLandingPageLinks();
 
   return (
     <div className="bg-slate-950 text-slate-200 antialiased selection:bg-blue-500/30 selection:text-blue-200 min-h-screen relative overflow-x-hidden">

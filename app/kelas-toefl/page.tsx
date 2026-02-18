@@ -32,15 +32,15 @@ export default function ClassToeflPage() {
           <p className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">Belajar TOEFL jadi lebih mudah, terarahkan, dan menyenangkan. Siap untuk Mendapatkan Kuliah, Beasiswa, atau Pekerjaan Impian.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="rounded-full px-8 text-lg h-12 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300">
+            <ScrollButton targetId="materi-toefl" size="lg" className="rounded-full px-8 text-lg h-12 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 cursor-pointer">
               Lihat Modul Ajar <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            </ScrollButton>
           </div>
         </div>
       </section>
 
       {/* 2. MATERI YANG AKAN DIAJARKAN */}
-      <section className="py-12 bg-muted">
+      <section id="materi-toefl" className="py-12 bg-muted">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">MATERI YANG AKAN DIAJARKAN</h2>
@@ -90,7 +90,7 @@ Mempertajam Skill pendengaran Sehingga Dengan Mudah Memahami Isi Percakapan"
             targetId="daftar-sekarang"
             size="lg"
             variant="secondary"
-            className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-10 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-200 h-auto"
+            className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-10 py-8 rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-200 h-auto cursor-pointer"
           >
             Ambil Kuotamu Sekarang
           </ScrollButton>

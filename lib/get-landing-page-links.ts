@@ -1,3 +1,18 @@
+export type ProgramPackage = {
+  id: string;
+  title: string;
+  original_price: number;
+  price: number;
+  is_best_value: boolean;
+};
+
+export type Schedules = {
+  id: string;
+  day: number;
+  month: string;
+  year: number;
+};
+
 export type LinkData = {
   test_toefl: {
     whatsapp: string;
@@ -9,6 +24,12 @@ export type LinkData = {
     instagram_account: string;
     group: string;
   };
+
+  pricing: {
+    program_packages: ProgramPackage[];
+  };
+
+  schedules: Schedules[];
 };
 
 export async function getLandingPageLinks(): Promise<LinkData | null> {

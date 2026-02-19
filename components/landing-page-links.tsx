@@ -10,16 +10,16 @@ export default function LandingPageLinks() {
   return (
     <div>
       {/* Contoh Penggunaan Data Test TOEFL */}
-      <a href={links?.test_toefl.whatsapp} target="_blank">
+      <a href={links?.test_toefl?.whatsapp} target="_blank">
         Join Channel WA
       </a>
 
-      <a href={links?.test_toefl.group} target="_blank">
+      <a href={links?.test_toefl?.group} target="_blank">
         Join Grup WA
       </a>
 
       {/* Contoh Penggunaan Data Ujian Ulang */}
-      <a href={links?.ujian_ulang.instagram_post} target="_blank">
+      <a href={links?.ujian_ulang?.instagram_post} target="_blank">
         Lihat Info Instagram
       </a>
     </div>

@@ -1,63 +1,91 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, CheckCircle2 } from "lucide-react";
+import { RegistrationForm } from "@/components/registration-form";
+import { CheckCircle2, ShieldCheck, Zap } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
-import { RegistrationModal } from "@/components/registration-modal";
-
-// Placeholder for user avatars
-const avatars = [
-  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=64&h=64&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=64&h=64&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=64&h=64&auto=format&fit=crop",
-];
 
 export function CTASection() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
-    <section className="relative py-12 px-4 md:px-6 bg-slate-50 overflow-hidden">
-      {/* Floating Decorative Elements (Avatars) */}
+    <section id="registration-form" className="relative py-20 lg:py-28 overflow-hidden bg-[#0B0F19]">
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute -top-[20%] -right-[10%] w-[60%] h-[60%] bg-blue-600/20 rounded-full blur-[100px] animate-pulse duration-[5000ms]"></div>
+        <div className="absolute -bottom-[20%] -left-[10%] w-[60%] h-[60%] bg-indigo-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+      </div>
 
-      <div className="container mx-auto max-w-4xl relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-[3rem] p-8 md:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.05)] text-center relative overflow-hidden"
-        >
-          {/* Badge */}
-          <div className="inline-block bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6">BERGABUNG SEKARANG</div>
+      <div className="container px-4 mx-auto relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+          {/* Left Column: Copywriting */}
+          <div className="lg:flex-1 text-left space-y-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 font-semibold text-sm"
+            >
+              <Zap className="w-4 h-4 fill-red-400" />
+              <span>Kesempatan Terbatas!</span>
+            </motion.div>
 
-          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">Tunggu apa lagi? Daftar sekarang</h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight shadow-text"
+            >
+              Bergabung Sekarang <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Tunggu apa lagi? Daftar sekarang</span>
+            </motion.h2>
 
-          <p className="text-slate-500 mb-8 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">Dapatkan akses penuh ke fitur eksklusif dan bergabunglah dengan komunitas profesional yang terus berkembang setiap harinya.</p>
+            <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="text-lg text-slate-300 leading-relaxed max-w-xl">
+              Dapatkan beasiswa pendidikan bahasa Inggris terbaik. Bergabunglah sekarang dan mulailah perjalananmu menuju kesuksesan bersama kami.
+            </motion.p>
 
-          {/* Arrows Decoration */}
-          <div className="flex justify-center gap-2 mb-8 text-blue-500">
-            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce" />
-            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce delay-100" />
-            <ArrowDown className="w-10 h-10 md:w-10 md:h-10 animate-bounce delay-200" />
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="space-y-4">
+              <FeatureRow text="Program Beasiswa Potongan 50%" />
+              <FeatureRow text="Kurikulum Standar Internasional" />
+              <FeatureRow text="Lingkungan Belajar yang Suportif" />
+              <FeatureRow text="Siap Karir & Studi Lanjut" />
+            </motion.div>
           </div>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsModalOpen(true)}
-            className="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all w-full md:w-auto min-w-[200px] cursor-pointer"
-          >
-            DAFTAR SEKARANG
-          </motion.button>
-        </motion.div>
+          {/* Right Column: Form Card */}
+          <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.4 }} className="lg:w-[600px] w-full shrink-0">
+            <div className="relative group">
+              {/* Card Glow Effect */}
+              <div className="absolute -inset-1 bg-gradient-to-b from-blue-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
 
-        <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} source="beasiswa" />
+              <div className="relative bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden">
+                <div className="bg-blue-50/50 p-6 border-b border-blue-100">
+                  <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
+                    <ShieldCheck className="w-5 h-5 text-blue-600" />
+                    Formulir Pendaftaran Beasiswa
+                  </h3>
+                  <p className="text-sm text-slate-500 mt-1">Lengkapi data diri Anda untuk mengamankan slot.</p>
+                </div>
 
-        <div className="mt-8 text-center">
-          <p className="text-slate-400 text-sm">Gratis pendaftaran. Tidak perlu kartu kredit. Batalkan kapan saja.</p>
+                <div className="p-6 md:p-8">
+                  <RegistrationForm source="beasiswa" />
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
+  );
+}
+
+function FeatureRow({ text }: { text: string }) {
+  return (
+    <div className="flex items-center gap-3 group">
+      <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+        <CheckCircle2 className="w-4 h-4 text-blue-500 group-hover:text-white transition-colors" />
+      </div>
+      <span className="text-slate-200 font-medium group-hover:text-white transition-colors">{text}</span>
+    </div>
   );
 }

@@ -1,17 +1,6 @@
 import { useState, useEffect } from "react";
 
-export type LinkData = {
-  test_toefl: {
-    whatsapp: string;
-    telegram: string;
-    group: string;
-  };
-  ujian_ulang: {
-    instagram_post: string;
-    instagram_account: string;
-    group: string;
-  };
-};
+import { LinkData } from "@/lib/get-landing-page-links";
 
 export function useLandingPageLinks() {
   const [links, setLinks] = useState<LinkData | null>(null);

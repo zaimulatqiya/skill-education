@@ -21,7 +21,16 @@ export function HeroSection() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1BB6E9] to-blue-400">Kampung Inggris</span>
           </h1>
 
-          <p className="text-slate-300 max-w-2xl text-sm md:text-base">Upgrade skill bahasa Inggrismu dengan metode belajar terbaik dan lingkungan yang mendukung. Raih impianmu sekarang juga!</p>
+          <p className="text-slate-300 max-w-2xl text-sm md:text-base mb-6">Upgrade skill bahasa Inggrismu dengan metode belajar terbaik dan lingkungan yang mendukung. Raih impianmu sekarang juga!</p>
+
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => document.getElementById("registration-form")?.scrollIntoView({ behavior: "smooth" })}
+            className="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all w-full md:w-auto min-w-[200px] cursor-pointer"
+          >
+            DAFTAR SEKARANG
+          </motion.button>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="relative w-full max-w-lg md:max-w-2xl mt-auto">

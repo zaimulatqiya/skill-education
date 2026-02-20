@@ -63,8 +63,9 @@ export function RegistrationForm({ source = "default" }: RegistrationFormProps) 
       intro = "Halo, saya ingin mendaftar Program Skill Education.";
     }
 
+    const ageStr = source === "beasiswa" ? `\nUsia: ${formData.age} tahun` : "";
     const programStr = source === "toefl-online" ? "" : `\n\nProgram Pilihan: ${formData.programPackage}`;
-    const message = `${intro}\n\nBiodata saya:\nNama: ${formData.fullName}\nUsia: ${formData.age} tahun\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}${programStr}\nMulai Belajar: ${formData.startPeriod}`;
+    const message = `${intro}\n\nBiodata saya:\nNama: ${formData.fullName}${ageStr}\nTempat Lahir: ${formData.birthPlace}\nTanggal Lahir: ${formData.birthDate}\nWhatsApp: ${formData.whatsapp}${programStr}\nMulai Belajar: ${formData.startPeriod}`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/6289521116925?text=${encodedMessage}`;
@@ -159,25 +160,27 @@ export function RegistrationForm({ source = "default" }: RegistrationFormProps) 
         </div>
 
         {/* Usia */}
-        <div className="md:col-span-2 space-y-2 text-left">
-          <label className="block text-sm font-medium text-foreground/80 ml-1">Usia</label>
-          <div className="relative group">
-            <div className="absolute left-4 top-3.5 text-muted-foreground group-focus-within:text-primary transition-colors">
-              <Hash size={18} />
+        {source === "beasiswa" && (
+          <div className="md:col-span-2 space-y-2 text-left">
+            <label className="block text-sm font-medium text-foreground/80 ml-1">Usia</label>
+            <div className="relative group">
+              <div className="absolute left-4 top-3.5 text-muted-foreground group-focus-within:text-primary transition-colors">
+                <Hash size={18} />
+              </div>
+              <input
+                type="number"
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                required
+                min="0"
+                max="100"
+                className="w-full bg-background/50 border border-input rounded-xl py-3 pl-11 pr-4 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                placeholder="Usia Anda"
+              />
             </div>
-            <input
-              type="number"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              required
-              min="0"
-              max="100"
-              className="w-full bg-background/50 border border-input rounded-xl py-3 pl-11 pr-4 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
-              placeholder="Usia Anda"
-            />
           </div>
-        </div>
+        )}
 
         {/* Paket Program (Dropdown) */}
         {source !== "toefl-online" && (
@@ -247,9 +250,11 @@ export function RegistrationForm({ source = "default" }: RegistrationFormProps) 
         <div className="pt-4 md:col-span-2">
           <button
             type="submit"
-            disabled={loading || !formData.fullName || !formData.age || (source !== "toefl-online" && !formData.programPackage) || !formData.startPeriod || !formData.birthPlace || !formData.birthDate || !formData.whatsapp}
+            disabled={
+              loading || !formData.fullName || (source === "beasiswa" && !formData.age) || (source !== "toefl-online" && !formData.programPackage) || !formData.startPeriod || !formData.birthPlace || !formData.birthDate || !formData.whatsapp
+            }
             className={`w-full font-bold py-4 rounded-xl shadow-lg transition-all duration-200 flex items-center justify-center ${
-              loading || !formData.fullName || !formData.age || (source !== "toefl-online" && !formData.programPackage) || !formData.startPeriod || !formData.birthPlace || !formData.birthDate || !formData.whatsapp
+              loading || !formData.fullName || (source === "beasiswa" && !formData.age) || (source !== "toefl-online" && !formData.programPackage) || !formData.startPeriod || !formData.birthPlace || !formData.birthDate || !formData.whatsapp
                 ? "bg-slate-200 text-slate-400 cursor-not-allowed shadow-none"
                 : "bg-[#2563EB] hover:bg-blue-700 text-white shadow-blue-600/20 hover:shadow-blue-600/30 transform hover:-translate-y-0.5 cursor-pointer active:scale-[0.98]"
             }`}

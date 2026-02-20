@@ -1,9 +1,9 @@
 "use client";
 
 import * as React from "react";
-import { Button, ButtonProps } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
-interface ScrollButtonProps extends ButtonProps {
+interface ScrollButtonProps extends React.ComponentProps<typeof Button> {
   targetId: string;
 }
 

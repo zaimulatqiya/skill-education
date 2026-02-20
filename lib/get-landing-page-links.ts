@@ -11,6 +11,7 @@ export type Schedules = {
   day: number;
   month: string;
   year: number;
+  program_type?: string;
 };
 
 export type LinkData = {

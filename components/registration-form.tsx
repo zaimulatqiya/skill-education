@@ -37,11 +37,20 @@ export function RegistrationForm({ source = "default" }: RegistrationFormProps) 
 
   const getStartPeriodOptions = () => {
     if (links?.schedules && links.schedules.length > 0) {
-      return links.schedules.map((schedule) => schedule.day + " " + schedule.month + " " + schedule.year);
+      // Filter schedules based on program source match with program_type
+      const filteredSchedules = links.schedules.filter((schedule) => {
+        // Assume default to toefl if no program type is provided in DB, or if source doesn't match beasiswa
+        const type = schedule.program_type || "toefl";
+        if (source === "beasiswa") return type === "beasiswa";
+        return type === "toefl";
+      });
+
+      if (filteredSchedules.length > 0) {
+        return filteredSchedules.map((schedule) => schedule.day + " " + schedule.month + " " + schedule.year);
+      }
     }
 
-    // Generate simple dynamic period options or static ones
-    // Usually Kampung Inggris starts on 10th and 25th
+    // Generate simple dynamic period options or static ones if no data
     return ["Periode 10 - Bulan Ini", "Periode 25 - Bulan Ini", "Periode 10 - Bulan Depan", "Periode 25 - Bulan Depan"];
   };
 

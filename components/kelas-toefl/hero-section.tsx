@@ -22,7 +22,7 @@ export function HeroSection() {
         <p className="text-base md:text-lg text-muted-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">Belajar TOEFL jadi lebih mudah, terarahkan, dan menyenangkan. Siap untuk Mendapatkan Kuliah, Beasiswa, atau Pekerjaan Impian.</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-20 mb-4 sm:mb-6">
-          <ScrollButton targetId="daftar-sekarang" size="lg" className="group rounded-full px-8 text-lg h-12 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-150 cursor-pointer hover:scale-105 active:scale-90">
+          <ScrollButton targetId="form-pendaftaran" size="lg" className="group rounded-full px-8 text-lg h-12 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-150 cursor-pointer hover:scale-105 active:scale-90">
             DAFTAR SEKARANG
             <ArrowRight className="ml-2 w-5 h-5 group-hover:hidden" />
             <ArrowDownRight className="ml-2 w-5 h-5 hidden group-hover:block" />

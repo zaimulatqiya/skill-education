@@ -5,12 +5,13 @@ import { ShieldCheckIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { useLandingPageLinks } from "@/hooks/use-landing-page-links";
+import { Skeleton } from "@/components/ui/skeleton";
 import { div } from "framer-motion/client";
 
 import { pricingData } from "@/lib/pricing-data";
 
 export function PricingSection() {
-  const { links } = useLandingPageLinks();
+  const { links, loading } = useLandingPageLinks();
 
   return (
     <section className="relative overflow-hidden py-12 bg-white">
@@ -46,22 +47,37 @@ export function PricingSection() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }} viewport={{ once: true }} className="mx-auto w-full max-w-6xl relative z-10">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-              {links?.pricing?.program_packages?.map((plan) => (
-                <div key={plan.id} className={cn("bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl hover:border-blue-200 transition duration-300 group", plan.is_best_value ? "relative" : "")}>
-                  {plan.is_best_value && <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg z-10">BEST VALUE</div>}
+              {loading
+                ? (links?.pricing?.program_packages || pricingData || Array.from({ length: 3 })).map((plan: any, i: number) => (
+                    <div key={`skeleton-${i}`} className="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 flex flex-col relative w-full group">
+                      {plan?.is_best_value && <div className="absolute top-0 right-0 bg-slate-200 text-transparent text-xs font-bold px-3 py-1 rounded-bl-lg z-10">BEST VALUE</div>}
 
-                  <div className="bg-blue-600 p-6 text-center group-hover:bg-blue-700 transition">
-                    <h4 className="text-white text-xl font-semibold">{plan.title}</h4>
-                  </div>
+                      <div className="bg-blue-600/5 p-6 flex items-center justify-center">
+                        <Skeleton className="h-7 w-2/3 bg-blue-600/20 rounded-full" />
+                      </div>
 
-                  <div className="p-8 text-center bg-white">
-                    <p className="text-red-400 line-through text-lg font-medium mb-1">
-                      {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(plan.original_price)}
-                    </p>
-                    <p className="text-slate-900 text-3xl font-bold tracking-tight">{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(plan.price)}</p>
-                  </div>
-                </div>
-              ))}
+                      <div className="p-8 text-center bg-white flex flex-col items-center">
+                        <Skeleton className="h-7 w-32 bg-slate-200 mb-1 rounded-full" />
+                        <Skeleton className="h-9 w-48 bg-slate-200 rounded-full" />
+                      </div>
+                    </div>
+                  ))
+                : links?.pricing?.program_packages?.map((plan) => (
+                    <div key={plan.id} className={cn("bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl hover:border-blue-200 transition duration-300 group", plan.is_best_value ? "relative" : "")}>
+                      {plan.is_best_value && <div className="absolute top-0 right-0 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-bl-lg z-10">BEST VALUE</div>}
+
+                      <div className="bg-blue-600 p-6 text-center group-hover:bg-blue-700 transition">
+                        <h4 className="text-white text-xl font-semibold">{plan.title}</h4>
+                      </div>
+
+                      <div className="p-8 text-center bg-white">
+                        <p className="text-red-400 line-through text-lg font-medium mb-1">
+                          {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(plan.original_price)}
+                        </p>
+                        <p className="text-slate-900 text-3xl font-bold tracking-tight">{new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(plan.price)}</p>
+                      </div>
+                    </div>
+                  ))}
             </div>
 
             <div className="mt-16 text-slate-500 flex items-center justify-center gap-x-2 text-sm bg-blue-50/50 py-2 px-4 rounded-full w-fit mx-auto border border-blue-100">

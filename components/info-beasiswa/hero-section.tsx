@@ -26,7 +26,7 @@ export function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById("registration-form")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.getElementById("form-pendaftaran-beasiswa")?.scrollIntoView({ behavior: "smooth" })}
             className="bg-[#2563EB] text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-blue-600/20 hover:shadow-blue-600/40 transition-all w-full md:w-auto min-w-[200px] cursor-pointer"
           >
             DAFTAR SEKARANG

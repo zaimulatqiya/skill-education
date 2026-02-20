@@ -58,7 +58,7 @@ export function CTASection() {
               {/* Card Glow Effect */}
               <div className="absolute -inset-1 bg-gradient-to-b from-blue-600 to-cyan-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
 
-              <div className="relative bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden">
+              <div id="form-pendaftaran-beasiswa" className="relative bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden scroll-mt-24">
                 <div className="bg-blue-50/50 p-6 border-b border-blue-100">
                   <h3 className="text-xl font-bold text-slate-900 flex items-center gap-2">
                     <ShieldCheck className="w-5 h-5 text-blue-600" />
